@@ -183,4 +183,4 @@ const play = () => {
   treeMaker();
 }
 
-play ()
+play ();

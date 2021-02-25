@@ -12,8 +12,12 @@ body {
 .gameZone {
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
+/* Play area content from here */
 
 .playArea {
   width: 1250px;
@@ -99,4 +103,13 @@ body {
   background-image: url("../img/leaves.JPG");
   background-size: cover;
   box-shadow: 0px 0px 4px 2px #77d62a;
+}
+
+
+/* Toll box content from here */
+
+.toolBox {
+  padding: 16px;
+  width: 1250px;
+  background-color: antiquewhite;
 }
