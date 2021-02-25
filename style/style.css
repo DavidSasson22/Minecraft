@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gameZone {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.playArea {
+  width: 1250px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #3FBFFF;
+}
+
+.segmant {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+.segmant:hover {
+  opacity: 0.5;
+}
+
+.sky {
+  background-color: #3FBFFF;
+}
+
+.upperLand {
+  background-image: url("../img/upper-ground.JPG");
+}
+
+.land {
+  background-image: url("../img/ground.JPG");
+  background-size: cover;
+}
+
+.cloud {
+  background-color: lemonchiffon;
+  border-radius:35% 25% 25% 5%;
+  box-shadow: 0px 0px 4px 2px rgb(0, 238, 255);
+}
+
+
+.sunTL {
+  background-color: #f90;
+  box-shadow: 0px 0px 4px 2px #f90;
+  border-radius: 100% 0 0 0;
+}
+.sunTR {
+  background-color: #f90;
+  box-shadow: 0px 0px 4px 2px #f90;
+  border-radius: 0 100% 0 0;
+}
+.sunBL {
+  background-color: #f90;
+  box-shadow: 0px 0px 4px 2px #f90;
+  border-radius: 0 0 0 100%;
+
+}
+.sunBR {
+  background-color: #f90;
+  box-shadow: 0px 0px 4px 2px #f90;
+  border-radius: 0 0 100% 0;
+}
+
+.block {
+  background-image: url("../img/stones.JPG");
+  background-size: cover;
+}
+
+.tree {
+  background-image: url("../img/tree-trunk3.JPG");
+  background-size: cover;
+}
