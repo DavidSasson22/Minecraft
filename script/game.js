@@ -140,15 +140,26 @@ const treeMaker = () => {
     let temp2 = document.querySelector(`[row = "${i}"][column = "${44}"]`);
     trucks.push(temp, temp2);
   }
-
-  
-
-
   console.log(trucks);
   trucks.forEach(truck => {
     truck.classList.remove(`sky`);
     truck.classList.add(`treeT`);
   })
+  let leaves = [];
+  for (let i = groundSt - 7; i < groundSt - 4; i++) {
+    for (let j = 12; j < 16; j++) {
+      let temp = document.querySelector(`[row = "${i}"][column = "${j}"]`);
+      leaves.push(temp);
+    }
+    for (let j = 42; j < 46; j++) {
+      let temp2 = document.querySelector(`[row = "${i}"][column = "${j}"]`);
+      leaves.push(temp2);
+    }
+    leaves.forEach(leave => {
+      leave.classList.remove(`sky`);
+      leave.classList.add(`treeL`)
+    })
+  }
 }
 
 
