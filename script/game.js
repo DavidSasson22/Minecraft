@@ -21,6 +21,12 @@ const skyMaker = () => {
       sky.classList.add(`segmant`);
       sky.setAttribute(`row`, i);
       sky.setAttribute(`column`, j);
+      sky.animate([
+        { opacity: '0' },
+        { opacity: '1' }
+      ], {
+        duration: 1000,
+      });
       playArea.appendChild(sky);
     }
   }
@@ -72,7 +78,7 @@ const cloudMaker = () => {
   //add clouds
   cloudAr.forEach(element => {
     element.classList.remove(`sky`);
-    element.classList.add(`cloud`);
+    setTimeout(() => { element.classList.add(`cloud`) }, 1200);
   })
 }
 
@@ -87,16 +93,17 @@ const sunMaker = () => {
   let br = document.querySelector(`[row = "${i + 1}"][column = "${j + 1}"]`);
 
   tl.classList.remove(`sky`);
-  tl.classList.add(`sunTL`);
+  setTimeout(() => { tl.classList.add(`sunTL`) }, 1000);
+
 
   tr.classList.remove(`sky`);
-  tr.classList.add(`sunTR`);
+  setTimeout(() => { tr.classList.add(`sunTR`) }, 1000);
 
   bl.classList.remove(`sky`);
-  bl.classList.add(`sunBL`);
+  setTimeout(() => { bl.classList.add(`sunBL`) }, 1000);
 
   br.classList.remove(`sky`);
-  br.classList.add(`sunBR`);
+  setTimeout(() => { br.classList.add(`sunBR`) }, 1000);
 
 }
 
@@ -144,7 +151,11 @@ const treeMaker = () => {
   trucks.forEach(truck => {
     truck.classList.remove(`sky`);
     truck.classList.add(`treeT`);
-  })
+  });
+
+
+
+  //For the leaves
   let leaves = [];
   for (let i = groundSt - 7; i < groundSt - 4; i++) {
     for (let j = 12; j < 16; j++) {
@@ -157,16 +168,19 @@ const treeMaker = () => {
     }
     leaves.forEach(leave => {
       leave.classList.remove(`sky`);
-      leave.classList.add(`treeL`)
+      leave.classList.add(`treeL`);
     })
   }
 }
 
 
+const play = () => {
+  skyMaker();
+  groundMaker();
+  cloudMaker();
+  sunMaker();
+  blockMaker();
+  treeMaker();
+}
 
-skyMaker();
-groundMaker();
-cloudMaker();
-sunMaker();
-blockMaker();
-treeMaker();
+play ()

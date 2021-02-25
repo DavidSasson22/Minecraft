@@ -50,6 +50,8 @@ body {
   background-color: lemonchiffon;
   border-radius:35% 25% 25% 5%;
   box-shadow: 0px 0px 4px 2px rgb(0, 238, 255);
+  transition: ease-in-out;
+  transition-duration: 2s;
 }
 
 
@@ -57,22 +59,30 @@ body {
   background-color: #f90;
   box-shadow: 0px 0px 4px 2px #f90;
   border-radius: 100% 0 0 0;
+  transition: ease-in-out;
+  transition-duration: 2s;
 }
 .sunTR {
   background-color: #f90;
   box-shadow: 0px 0px 4px 2px #f90;
   border-radius: 0 100% 0 0;
+  transition: ease-in-out;
+  transition-duration: 2s;
 }
 .sunBL {
   background-color: #f90;
   box-shadow: 0px 0px 4px 2px #f90;
   border-radius: 0 0 0 100%;
+  transition: ease-in-out;
+  transition-duration: 2s;
 
 }
 .sunBR {
   background-color: #f90;
   box-shadow: 0px 0px 4px 2px #f90;
   border-radius: 0 0 100% 0;
+  transition: ease-in-out;
+  transition-duration: 2s;
 }
 
 .block {
