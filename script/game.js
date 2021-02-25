@@ -108,22 +108,21 @@ const blockMaker = () => {
   //first chunk
 
   for (let i = groundSt - 4; i < groundSt; i++) {
-    for (let j = 0; j < i -4 ; j++) {
+    for (let j = 0; j < i - 4; j++) {
       let block = document.querySelector(`[row = "${i}"][column = "${j}"]`);
       blocks.push(block);
     }
   }
-  
+
   //second chunk
   l = 0;
-  for (let i = groundSt - 2 ; i < groundSt; i++) {
+  for (let i = groundSt - 2; i < groundSt; i++) {
     for (let j = 30 - l; j < 38 + l; j++) {
       let temp = document.querySelector(`[row = "${i}"][column = "${j}"]`);
       blocks.push(temp);
     }
     l += 1;
   }
-  console.log(blocks);
   blocks.forEach(block => {
     block.classList.remove(`sky`);
     block.classList.add(`block`);
@@ -133,7 +132,25 @@ const blockMaker = () => {
 
 //Finaly lets create TREES
 
-//for the 
+//for the trees-truck
+const treeMaker = () => {
+  let trucks = [];
+  for (let i = groundSt - 4; i < groundSt; i++) {
+    let temp = document.querySelector(`[row = "${i}"][column = "${14}"]`);
+    let temp2 = document.querySelector(`[row = "${i}"][column = "${44}"]`);
+    trucks.push(temp, temp2);
+  }
+
+  
+
+
+  console.log(trucks);
+  trucks.forEach(truck => {
+    truck.classList.remove(`sky`);
+    truck.classList.add(`treeT`);
+  })
+}
+
 
 
 skyMaker();
@@ -141,3 +158,4 @@ groundMaker();
 cloudMaker();
 sunMaker();
 blockMaker();
+treeMaker();
