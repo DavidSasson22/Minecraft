@@ -192,6 +192,18 @@ li:hover {
   background-image: url("../img/pickaxe-icon-29.jpg");
 }
 
+.rSoil {
+  background-image: url("../img/ground.JPG");
+}
+
+.rWood {
+  background-image: url("../img/tree-trunk2.JPG");
+}
+
+.rBreak {
+  background-image: url("../img/stones.JPG");
+}
+
 .nice {
   padding: 0 16px 0 16px;
 }
