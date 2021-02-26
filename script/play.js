@@ -21,6 +21,14 @@ let currentSeg;
 
 //Reset game function
 reset.addEventListener("click", () => {
+  soilCounter = 0;
+  woodCounter = 0;
+  leaveCounter = 0;
+  breakCounter = 0;
+  soil.textContent = `${soilCounter}`;
+  wood.textContent = `${woodCounter}`;
+  leave.textContent = `${leaveCounter}`;
+  rbreak.textContent = `${breakCounter}`;
   playArea.innerHTML = '';
   play();
 });
@@ -75,7 +83,7 @@ const mineAble = () => {
     (selector === 0 && ((currentSeg.classList.contains(`treeT`) || currentSeg.classList.contains(`treeL`)))) ||
     (selector === 1 && (currentSeg.classList.contains(`block`))) ||
     (selector === 2 && ((currentSeg.classList.contains(`land`) || currentSeg.classList.contains(`upperLand`))))
-    ){
+  ) {
     return true
   }
   return false
@@ -86,6 +94,22 @@ const mineAble = () => {
 
 const switchClass = () => {
   if (mineAble() && skyNear()) {
+    if (currentSeg.classList.contains(`upperLand`) || currentSeg.classList.contains(`land`)) {
+      soilCounter += 1;
+      soil.textContent = `${soilCounter}`;
+    }
+    else if (currentSeg.classList.contains(`block`)) {
+      breakCounter += 1;
+      rbreak.textContent = `${breakCounter}`;
+    }
+    else if (currentSeg.classList.contains(`treeT`)) {
+      woodCounter += 1;
+      wood.textContent = `${woodCounter}`;
+    }
+    else {
+      leaveCounter += 1;
+      leave.textContent = `${leaveCounter}`;
+    }
     currentSeg.setAttribute(`class`, `segmant`);
     currentSeg.classList.add(`sky`);
   }
