@@ -135,6 +135,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -174,10 +175,17 @@ li {
   height: 60px;
   border: 1px #2F6B91 solid;
   background-size: cover;
+  transition: all 0.1s ease-in;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: minecraftFontBold;
 }
 
 li:hover {
   cursor: pointer;
+  box-shadow: 5px 5px 5px #8A7D6B;
 }
 
 .axe {

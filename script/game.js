@@ -1,11 +1,8 @@
 //Set play area variables
 
 const playArea = document.querySelector(`.playArea`);
-console.log(playArea);
 const playAreaW = parseInt(window.getComputedStyle(playArea).width);
-console.log(playAreaW);
 const playAreaH = parseInt(window.getComputedStyle(playArea).height);
-console.log(playAreaH);
 
 
 const groundSt = 11;
@@ -147,7 +144,6 @@ const treeMaker = () => {
     let temp2 = document.querySelector(`[row = "${i}"][column = "${44}"]`);
     trucks.push(temp, temp2);
   }
-  console.log(trucks);
   trucks.forEach(truck => {
     truck.classList.remove(`sky`);
     truck.classList.add(`treeT`);
