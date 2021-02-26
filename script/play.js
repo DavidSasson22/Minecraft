@@ -54,6 +54,30 @@ shovel.addEventListener("click", () => {
   selector = 2;
 });
 
+soil.addEventListener("click", () => {
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  soil.classList.add(`chosen`);
+  selector = 3;
+});
+
+wood.addEventListener("click", () => {
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  wood.classList.add(`chosen`);
+  selector = 4;
+});
+
+leave.addEventListener("click", () => {
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  leave.classList.add(`chosen`);
+  selector = 5;
+});
+
+rbreak.addEventListener("click", () => {
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  rbreak.classList.add(`chosen`);
+  selector = 6;
+});
+
 
 //Count resources
 let soilCounter = 0;

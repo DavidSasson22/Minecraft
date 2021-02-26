@@ -184,6 +184,7 @@ li {
   align-items: center;
   justify-content: center;
   font-family: minecraftFontBold;
+  opacity: 0.6;
 }
 
 li:hover {
@@ -242,5 +243,6 @@ li:hover {
 }
 
 .chosen {
-  border: 2px solid black;
+  border: 3px solid #5A9189;
+  opacity: 1;
 }
