@@ -109,8 +109,8 @@ const sunMaker = () => {
 
 const blockMaker = () => {
   let blocks = [];
-  //first chunk
 
+  //first chunk
   for (let i = groundSt - 4; i < groundSt; i++) {
     for (let j = 0; j < i - 4; j++) {
       let block = document.querySelector(`[row = "${i}"][column = "${j}"]`);

@@ -136,6 +136,9 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  border: 2px rgb(114, 47, 8) solid;
+  border-left: 4px rgb(114, 47, 8) solid;
+  border-right: 4px rgb(114, 47, 8) solid;
 }
 
 
@@ -206,6 +209,11 @@ li:hover {
 
 .rWood {
   background-image: url("../img/tree-trunk2.JPG");
+}
+
+.rLeaves {
+  background-image: url("../img/leaves.JPG");
+  background-size: contain;
 }
 
 .rBreak {
