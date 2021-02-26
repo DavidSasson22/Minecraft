@@ -47,15 +47,15 @@ rbreak.textContent = `${breakCounter}`;
 
 
 //Check if specifc segmant has at least one border with sky element
-const skyNear = (z) => {
-  let x = Number(z.getAttribute(`row`));
-  let y = Number(z.getAttribute(`column`));
+const skyNear = () => {
+  let x = Number(currentSeg.getAttribute(`row`));
+  let y = Number(currentSeg.getAttribute(`column`));
 
-  let right = document.querySelector(`[row = "${x}"][column = "${y+1}"]`);
-  let left = document.querySelector(`[row = "${x}"][column = "${y-1}"]`);
-  let top = document.querySelector(`[row = "${x-1}"][column = "${y}"]`);
-  let bottom = document.querySelector(`[row = "${x+1}"][column = "${y}"]`);
-  
+  let right = document.querySelector(`[row = "${x}"][column = "${y + 1}"]`);
+  let left = document.querySelector(`[row = "${x}"][column = "${y - 1}"]`);
+  let top = document.querySelector(`[row = "${x - 1}"][column = "${y}"]`);
+  let bottom = document.querySelector(`[row = "${x + 1}"][column = "${y}"]`);
+
   if (
     right.classList.contains(`sky`) ||
     left.classList.contains(`sky`) ||
@@ -71,15 +71,29 @@ const skyNear = (z) => {
 
 // //Set conditions for mining 
 const mineAble = () => {
-  if(
-    (selector === 0 && (currentSeg.classList.contains((`treeT`) || (`treeL`)))) ||
+  if (
+    (selector === 0 && ((currentSeg.classList.contains(`treeT`) || currentSeg.classList.contains(`treeL`)))) ||
     (selector === 1 && (currentSeg.classList.contains(`block`))) ||
-    (selector === 2 && (currentSeg.classList.contains(`land`)))){
+    (selector === 2 && ((currentSeg.classList.contains(`land`) || currentSeg.classList.contains(`upperLand`))))
+    ){
     return true
   }
   return false
 }
 
 
+//Now for The real cool function, of playing (:
+
+const switchClass = () => {
+  if (mineAble() && skyNear()) {
+    currentSeg.setAttribute(`class`, `segmant`);
+    currentSeg.classList.add(`sky`);
+  }
+}
+
+
 //Add event listener to all segmants and update the current
-segmant.forEach(seg => seg.addEventListener("click", () => currentSeg = seg));
+segmant.forEach(seg => seg.addEventListener("click", () => {
+  currentSeg = seg;
+  switchClass();
+}));
