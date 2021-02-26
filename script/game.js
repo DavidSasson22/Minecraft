@@ -170,7 +170,7 @@ const treeMaker = () => {
 }
 
 
-const play = () => {
+const play1 = () => {
   skyMaker();
   groundMaker();
   cloudMaker();
@@ -179,4 +179,4 @@ const play = () => {
   treeMaker();
 }
 
-play ();
+play1 ();

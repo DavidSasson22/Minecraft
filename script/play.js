@@ -21,16 +21,8 @@ let myToolBox = [soil, wood, leave, rbreak, axe, pickAxe, shovel];
 
 //Reset game function
 reset.addEventListener("click", () => {
-  soilCounter = 0;
-  woodCounter = 0;
-  leaveCounter = 0;
-  breakCounter = 0;
-  soil.textContent = `${soilCounter}`;
-  wood.textContent = `${woodCounter}`;
-  leave.textContent = `${leaveCounter}`;
-  rbreak.textContent = `${breakCounter}`;
-  playArea.innerHTML = '';
-  play();
+  location.reload();
+  play1();
 });
 
 
@@ -91,7 +83,6 @@ leave.textContent = `${leaveCounter}`;
 rbreak.textContent = `${breakCounter}`;
 
 
-
 //Check if specifc segmant has at least one border with sky element
 const skyNear = () => {
   let x = Number(currentSeg.getAttribute(`row`));
@@ -128,7 +119,7 @@ const mineAble = () => {
 }
 
 
-//Now for The real cool function, of playing (:
+//Function to substruct div classes
 
 const switchClass = () => {
   if (mineAble() && skyNear()) {
@@ -154,8 +145,37 @@ const switchClass = () => {
 }
 
 
+//set condition for filling 
+const fillAble = () => {
+  let x = Number(currentSeg.getAttribute(`row`));
+  let y = Number(currentSeg.getAttribute(`column`));
+  let bottom = document.querySelector(`[row = "${x + 1}"][column = "${y}"]`);
+
+  if (currentSeg.classList.contains(`sky`) && !bottom.classList.contains(`sky`)) {
+    if (selector > 2) {
+      return true
+    }
+  }
+  return false
+}
+
+//Function to add div classes
+
+// const fillSky = () => {
+//   if (fillAble()) {
+//     if(selector = 3 && soilCounter > 0) {
+//       currentSeg.classList.remove(`sky`);
+//       currentSeg.classList.add(`land`);
+//     }
+//   } 
+// }
+
+
+
+
 //Add event listener to all segmants and update the current
 segmant.forEach(seg => seg.addEventListener("click", () => {
   currentSeg = seg;
   switchClass();
+  fillSky();
 }));
