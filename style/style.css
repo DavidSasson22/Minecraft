@@ -130,9 +130,11 @@ body {
 .toolBox {
   padding: 16px;
   width: 98%;
-  background-color: antiquewhite;
+  /* background-image: url("../img/Desert_Sand_Texture-1203.jpg"); */
+  background-color: #ddb174;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 
@@ -146,15 +148,17 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;  
+  color: #3D4491;
 }
 
 .toolBox h2 {
   font-family: minecraftFontBold;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 17px;
   text-align: center;
-
+  margin-bottom: 4px;
+  color: #3D4491;
 }
 
 ul {
@@ -168,10 +172,43 @@ li {
   margin: 0 1px 0 1px;
   width: 60px;
   height: 60px;
-  border: 1px black solid;
+  border: 1px #2F6B91 solid;
+  background-size: cover;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.axe {
+  background-image: url("../img/axe.png");
+}
+
+.pickAxe {
+  background-image: url("../img/pickaxe-icon-7.jpg");
+}
+
+.shovel {
+  background-image: url("../img/pickaxe-icon-29.jpg");
 }
 
 .nice {
   padding: 0 16px 0 16px;
 }
 
+.toolBox button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin-top: 12px;
+  font-family: minecraftFontBold;
+  border: 4px solid #BDD6D2;
+  background-color: #5A9189;
+  color: aliceblue;
+  transition: all 0.1s ease-in;
+}
+
+.toolBox button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #8A7D6B;
+}
