@@ -17,7 +17,7 @@ let segmant = document.querySelectorAll(`.segmant`);
 
 let selector = -1;
 let currentSeg;
-
+let myToolBox = [soil, wood, leave, rbreak, axe, pickAxe, shovel];
 
 //Reset game function
 reset.addEventListener("click", () => {
@@ -36,9 +36,23 @@ reset.addEventListener("click", () => {
 
 //Choose tool Function: 
 //0 = axe, 1 = pickAxe 2 = Shovel
-axe.addEventListener("click", () => selector = 0);
-pickAxe.addEventListener("click", () => selector = 1);
-shovel.addEventListener("click", () => selector = 2);
+axe.addEventListener("click", () => {
+  selector = 0;
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  axe.classList.add(`chosen`);
+});
+
+pickAxe.addEventListener("click", () => {
+  selector = 1;
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  pickAxe.classList.add(`chosen`);
+});
+
+shovel.addEventListener("click", () => {
+  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  shovel.classList.add(`chosen`);
+  selector = 2;
+});
 
 
 //Count resources
