@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 100vw;
+  width: auto;
   height: 100vh;
 }
 
@@ -20,16 +20,16 @@ body {
 /* Play area content from here */
 
 .playArea {
-  width: 1250px;
-  height: 400px;
+  width: 98%;
+  height: calc(100vw * 0.32);
   display: flex;
   flex-wrap: wrap;
   background-color: #3FBFFF;
 }
 
 .segmant {
-  width: 25px;
-  height: 25px;
+  width: 2%;
+  height: 6.25%;
   display: inline-block;
 }
 
@@ -110,6 +110,12 @@ body {
 
 .toolBox {
   padding: 16px;
-  width: 1250px;
+  width: 98%;
   background-color: antiquewhite;
 }
+
+ul {
+  list-style: none;
+  display: flex;
+}
+

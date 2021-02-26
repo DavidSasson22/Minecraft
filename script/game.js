@@ -14,8 +14,8 @@ const groundSt = 11;
 //Fill play area with sky segmants, and CREATE MATRIX for game area
 
 const skyMaker = () => {
-  for (let i = 0; i < playAreaH / 25; i++) {
-    for (let j = 0; j < playAreaW / 25; j++) {
+  for (let i = 0; i < 409 / 25; i++) {
+    for (let j = 0; j < 1250 / 25; j++) {
       let sky = document.createElement(`div`);
       sky.classList.add(`sky`);
       sky.classList.add(`segmant`);
@@ -41,7 +41,7 @@ const groundMaker = () => {
     seg.classList.remove(`sky`);
     seg.classList.add(`upperLand`);
   }
-  for (let i = groundSt + 1; i < playAreaH / 25; i++) {
+  for (let i = groundSt + 1; i < 409 / 25; i++) {
     let ground = document.querySelectorAll(`[row = "${i}"]`);
     for (seg of ground) {
       seg.classList.remove(`sky`);
