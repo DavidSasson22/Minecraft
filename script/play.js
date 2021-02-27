@@ -23,6 +23,14 @@ let myToolBox = [soil, wood, leave, rbreak, axe, pickAxe, shovel];
 
 //Reset game function
 reset.addEventListener("click", () => {
+  soilCounter = 0;
+  woodCounter = 0;
+  leaveCounter = 0;
+  breakCounter = 0;
+  soil.textContent = `${soilCounter}`;
+  wood.textContent = `${woodCounter}`;
+  leave.textContent = `${leaveCounter}`;
+  rbreak.textContent = `${breakCounter}`;
   // location.reload();
   play1();
 });

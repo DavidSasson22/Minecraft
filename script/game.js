@@ -171,7 +171,6 @@ const treeMaker = () => {
 
 
 const play1 = () => {
-  skyMaker();
   groundMaker();
   cloudMaker();
   sunMaker();
@@ -179,4 +178,5 @@ const play1 = () => {
   treeMaker();
 }
 
+skyMaker();
 play1 ();
