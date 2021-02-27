@@ -49,6 +49,17 @@ reset.addEventListener("click", () => {
 });
 
 
+//RestartGame
+restart.addEventListener("click", ()=> {
+  skyReset();
+  play1();
+  landingPage.style.display = "flex";
+  playArea.style.background = "none";
+  playArea.style.display = "none";
+  toolBox.style.display = "none";
+})
+
+
 //Choose tool Function: 
 //axe = 0  , pickAxe = 1  Shovel = 2  
 axe.addEventListener("click", () => {
