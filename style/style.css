@@ -300,8 +300,21 @@ li:hover {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .rules h6 {
     font-size: 12px;
+  }
+  li {
+    height: 40px;
+    width: 40px;    
+  }
+  .toolBox h1 {
+    font-size: 16px;
+  }
+  .toolBox h2 {
+    font-size: 14px;
+  }
+  body {
+  background-color: #ddb174;
   }
 } 
