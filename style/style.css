@@ -298,3 +298,10 @@ li:hover {
   cursor: pointer;
   box-shadow: 5px 5px 5px white;
 }
+
+
+@media (max-width: 500px) {
+  .rules h6 {
+    font-size: 12px;
+  }
+} 
