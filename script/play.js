@@ -19,15 +19,16 @@ let selector = -1;
 let currentSeg;
 let myToolBox = [soil, wood, leave, rbreak, axe, pickAxe, shovel];
 
+
 //Reset game function
 reset.addEventListener("click", () => {
-  location.reload();
+  // location.reload();
   play1();
 });
 
 
 //Choose tool Function: 
-//0 = axe, 1 = pickAxe 2 = Shovel
+//axe = 0  , pickAxe = 1  Shovel = 2  
 axe.addEventListener("click", () => {
   selector = 0;
   myToolBox.forEach(ele => ele.classList.remove('chosen'));
@@ -174,8 +175,19 @@ const fillAble = () => {
 
 
 //Add event listener to all segmants and update the current
-segmant.forEach(seg => seg.addEventListener("click", () => {
-  currentSeg = seg;
-  switchClass();
-  fillSky();
-}));
+const listener = () => {
+  segmant.forEach(seg => seg.addEventListener("click", () => {
+    currentSeg = seg;
+    if (selector < 3) {
+      switchClass();
+      console.log(`switchClass activated`);
+    }
+    else {
+      fillSky();
+      console.log(`fillsky activated`);
+    }
+  }));
+}
+
+listener();
+
