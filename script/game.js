@@ -1,6 +1,9 @@
 //Set play area variables
 
 const playArea = document.querySelector(`.playArea`);
+const startGame = document.querySelector(`.startGame`);
+const landingPage = document.querySelector(`.landingPage`);
+const toolBox = document.querySelector(`.toolBox`);
 const playAreaW = parseInt(window.getComputedStyle(playArea).width);
 const playAreaH = parseInt(window.getComputedStyle(playArea).height);
 
@@ -180,3 +183,12 @@ const play1 = () => {
 
 skyMaker();
 play1 ();
+
+
+startGame.addEventListener("click", () => {
+  landingPage.style.display = "none";
+  playArea.style.background = "#3FBFFF";
+  playArea.style.display = "flex";
+  toolBox.style.display = "flex";
+  console.log("start game clicked");
+})

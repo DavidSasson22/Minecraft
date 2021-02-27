@@ -41,9 +41,10 @@ body {
 .playArea {
   width: 98%;
   height: calc(100vw * 0.32);
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-wrap: wrap;
-  background-color: #3FBFFF;
+  /* background-color: #3FBFFF; */
 }
 
 .segmant {
@@ -132,7 +133,8 @@ body {
   width: 98%;
   /* background-image: url("../img/Desert_Sand_Texture-1203.jpg"); */
   background-color: #ddb174;
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -245,4 +247,59 @@ li:hover {
 .chosen {
   border: 3px solid #5A9189;
   opacity: 1;
+}
+
+
+/* -------------------Landing Page----------------------------- */
+
+.landingPage {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #5A9189; */
+  background-image: url(../img/backgrond2);
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules {
+  background-color: black;
+  color: white;
+  width: 80vw;
+  opacity: 0.8;
+}
+
+.title {
+  width: 50vw;
+  height: calc(50vw / 2);
+  background-image: url(../img/minecraft-logo-angle-text.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.rules h6 {
+  font-family: minecraftFontRegular;
+  font-size: 32px;
+  color: white;
+}
+
+
+.startGame {
+  color: black;
+  font-size: 32px;
+  border: 2px solid black;
+  background-color: aliceblue;
+  padding: 16px;
+  transition: all 0.2s ease-in;
+}
+
+
+.startGame:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px white;
 }
