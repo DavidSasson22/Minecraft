@@ -237,13 +237,6 @@ const fillSky = () => {
 }
 
 
-// let breakCounter = 0;
-
-// leave.textContent = `${leaveCounter}`;
-// rbreak.textContent = `${breakCounter}`;
-
-
-
 //Add event listener to all segmants and update the current
 const listener = () => {
   segmant.forEach(seg => seg.addEventListener("click", () => {
@@ -260,4 +253,3 @@ const listener = () => {
 }
 
 listener();
-

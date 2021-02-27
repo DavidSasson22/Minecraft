@@ -78,7 +78,7 @@ const cloudMaker = () => {
   //add clouds
   cloudAr.forEach(element => {
     element.classList.remove(`sky`);
-    setTimeout(() => { element.classList.add(`cloud`) }, 1200);
+    setTimeout(() => { element.classList.add(`cloud`) }, 800);
   })
 }
 
