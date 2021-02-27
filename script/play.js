@@ -55,6 +55,10 @@ restart.addEventListener("click", () => {
   woodCounter = 0;
   leaveCounter = 0;
   breakCounter = 0;
+  soil.textContent = `${soilCounter}`;
+  wood.textContent = `${woodCounter}`;
+  leave.textContent = `${leaveCounter}`;
+  rbreak.textContent = `${breakCounter}`;
   skyReset();
   play1();
   landingPage.style.display = "flex";
