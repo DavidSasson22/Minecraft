@@ -28,7 +28,7 @@ const skyReset = () => {
       let sky = document.querySelector(`[row = "${i}"][column = "${j}"]`);
       sky.classList.remove(...sky.classList);
       sky.classList.add(`sky`);
-      sky.classList.add(`segmant`);       
+      sky.classList.add(`segmant`);
     }
   }
 }
@@ -50,7 +50,11 @@ reset.addEventListener("click", () => {
 
 
 //RestartGame
-restart.addEventListener("click", ()=> {
+restart.addEventListener("click", () => {
+  soilCounter = 0;
+  woodCounter = 0;
+  leaveCounter = 0;
+  breakCounter = 0;
   skyReset();
   play1();
   landingPage.style.display = "flex";

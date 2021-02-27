@@ -77,7 +77,6 @@ const cloudMaker = () => {
 
   //add clouds
   cloudAr.forEach(element => {
-    element.classList.remove(`sky`);
     setTimeout(() => { element.classList.add(`cloud`) }, 800);
   })
 }
@@ -92,17 +91,17 @@ const sunMaker = () => {
   let bl = document.querySelector(`[row = "${i + 1}"][column = "${j}"]`);
   let br = document.querySelector(`[row = "${i + 1}"][column = "${j + 1}"]`);
 
-  tl.classList.remove(`sky`);
+  // tl.classList.remove(`sky`);
   setTimeout(() => { tl.classList.add(`sunTL`) }, 1000);
 
 
-  tr.classList.remove(`sky`);
+  // tr.classList.remove(`sky`);
   setTimeout(() => { tr.classList.add(`sunTR`) }, 1000);
 
-  bl.classList.remove(`sky`);
+  // bl.classList.remove(`sky`);
   setTimeout(() => { bl.classList.add(`sunBL`) }, 1000);
 
-  br.classList.remove(`sky`);
+  // br.classList.remove(`sky`);
   setTimeout(() => { br.classList.add(`sunBR`) }, 1000);
 
 }
