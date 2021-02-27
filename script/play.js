@@ -21,6 +21,19 @@ let currentSeg;
 let myToolBox = [soil, wood, leave, rbreak, axe, pickAxe, shovel];
 
 
+//sky reset function
+const skyReset = () => {
+  for (let i = 0; i < 409 / 25; i++) {
+    for (let j = 0; j < 1250 / 25; j++) {
+      let sky = document.querySelector(`[row = "${i}"][column = "${j}"]`);
+      sky.classList.remove(...sky.classList);
+      sky.classList.add(`sky`);
+      sky.classList.add(`segmant`);       
+    }
+  }
+}
+
+
 //Reset game function
 reset.addEventListener("click", () => {
   soilCounter = 0;
@@ -31,7 +44,7 @@ reset.addEventListener("click", () => {
   wood.textContent = `${woodCounter}`;
   leave.textContent = `${leaveCounter}`;
   rbreak.textContent = `${breakCounter}`;
-  // location.reload();
+  skyReset();
   play1();
 });
 
@@ -42,20 +55,17 @@ axe.addEventListener("click", () => {
   selector = 0;
   currentTool.classList.remove('chosen');
   currentTool = axe;
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   axe.classList.add(`chosen`);
 });
 
 pickAxe.addEventListener("click", () => {
   selector = 1;
   currentTool.classList.remove('chosen');
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   currentTool = pickAxe;
   pickAxe.classList.add(`chosen`);
 });
 
 shovel.addEventListener("click", () => {
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 2;
   currentTool.classList.remove('chosen');
   currentTool = shovel;
@@ -64,43 +74,43 @@ shovel.addEventListener("click", () => {
 });
 
 soil.addEventListener("click", () => {
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 3;
   currentTool.classList.remove('chosen');
+  currentTool = soil;
   soil.classList.add(`chosen`);
 
 });
 
 wood.addEventListener("click", () => {
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 4;
   currentTool.classList.remove('chosen');
+  currentTool = wood;
   wood.classList.add(`chosen`);
 
 });
 
 leave.addEventListener("click", () => {
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 5;
   currentTool.classList.remove('chosen');
+  currentTool = leave;
   leave.classList.add(`chosen`);
 
 });
 
 rbreak.addEventListener("click", () => {
-  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 6;
   currentTool.classList.remove('chosen');
+  currentTool = rbreak;
   rbreak.classList.add(`chosen`);
 
 });
 
 
 //Count resources
-let soilCounter = 0;
-let woodCounter = 0;
-let leaveCounter = 0;
-let breakCounter = 0;
+var soilCounter = 0;
+var woodCounter = 0;
+var leaveCounter = 0;
+var breakCounter = 0;
 
 soil.textContent = `${soilCounter}`;
 wood.textContent = `${woodCounter}`;
@@ -177,24 +187,49 @@ const fillAble = () => {
   let bottom = document.querySelector(`[row = "${x + 1}"][column = "${y}"]`);
 
   if (currentSeg.classList.contains(`sky`) && !bottom.classList.contains(`sky`)) {
-    if (selector > 2) {
-      return true
-    }
+    console.log(`fillAble returned true`);
+    return true
   }
+  console.log(`fillAble returned false`);
   return false
 }
 
 //Function to add div classes
 
-// const fillSky = () => {
-//   if (fillAble()) {
-//     if(selector = 3 && soilCounter > 0) {
-//       currentSeg.classList.remove(`sky`);
-//       currentSeg.classList.add(`land`);
-//     }
-//   } 
-// }
+const fillSky = () => {
+  if (fillAble()) {
+    if (selector === 3 && soilCounter > 0) {
+      soilCounter -= 1;
+      soil.textContent = `${soilCounter}`;
+      currentSeg.classList.remove(`sky`);
+      currentSeg.classList.add(`land`);
+    }
+    else if (selector === 4 && woodCounter > 0) {
+      woodCounter -= 1;
+      wood.textContent = `${woodCounter}`;
+      currentSeg.classList.remove(`sky`);
+      currentSeg.classList.add(`treeT`);
+    }
+    else if (selector === 5 && leaveCounter > 0) {
+      leaveCounter -= 1;
+      leave.textContent = `${leaveCounter}`;
+      currentSeg.classList.remove(`sky`);
+      currentSeg.classList.add(`treeL`);
+    }
+    else if (selector === 6 && breakCounter > 0) {
+      breakCounter -= 1;
+      rbreak.textContent = `${breakCounter}`;
+      currentSeg.classList.remove(`sky`);
+      currentSeg.classList.add(`block`);
+    }
+  }
+}
 
+
+// let breakCounter = 0;
+
+// leave.textContent = `${leaveCounter}`;
+// rbreak.textContent = `${breakCounter}`;
 
 
 
