@@ -16,6 +16,7 @@ let segmant = document.querySelectorAll(`.segmant`);
 
 
 let selector = -1;
+let currentTool = axe;
 let currentSeg;
 let myToolBox = [soil, wood, leave, rbreak, axe, pickAxe, shovel];
 
@@ -31,44 +32,59 @@ reset.addEventListener("click", () => {
 //axe = 0  , pickAxe = 1  Shovel = 2  
 axe.addEventListener("click", () => {
   selector = 0;
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  currentTool.classList.remove('chosen');
+  currentTool = axe;
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   axe.classList.add(`chosen`);
 });
 
 pickAxe.addEventListener("click", () => {
   selector = 1;
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  currentTool.classList.remove('chosen');
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
+  currentTool = pickAxe;
   pickAxe.classList.add(`chosen`);
 });
 
 shovel.addEventListener("click", () => {
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
-  shovel.classList.add(`chosen`);
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 2;
+  currentTool.classList.remove('chosen');
+  currentTool = shovel;
+  shovel.classList.add(`chosen`);
+
 });
 
 soil.addEventListener("click", () => {
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
-  soil.classList.add(`chosen`);
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 3;
+  currentTool.classList.remove('chosen');
+  soil.classList.add(`chosen`);
+
 });
 
 wood.addEventListener("click", () => {
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
-  wood.classList.add(`chosen`);
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 4;
+  currentTool.classList.remove('chosen');
+  wood.classList.add(`chosen`);
+
 });
 
 leave.addEventListener("click", () => {
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
-  leave.classList.add(`chosen`);
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 5;
+  currentTool.classList.remove('chosen');
+  leave.classList.add(`chosen`);
+
 });
 
 rbreak.addEventListener("click", () => {
-  myToolBox.forEach(ele => ele.classList.remove('chosen'));
-  rbreak.classList.add(`chosen`);
+  // myToolBox.forEach(ele => ele.classList.remove('chosen'));
   selector = 6;
+  currentTool.classList.remove('chosen');
+  rbreak.classList.add(`chosen`);
+
 });
 
 
