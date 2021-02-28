@@ -27,7 +27,7 @@ const skyMaker = () => {
       ], {
         duration: 1000,
       });
-      playArea.appendChild(sky);
+        playArea.appendChild(sky);
     }
   }
 }
