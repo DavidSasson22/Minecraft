@@ -108,7 +108,7 @@ const sunMaker = () => {
 
 const blockMaker = () => {
   let blocks = [];
-  let dur = 1000;
+  let dur = 2000;
 
 
   //first chunk
@@ -138,11 +138,16 @@ const blockMaker = () => {
       { opacity: `1` },
       { opacity: `1` },
       { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
       { opacity: `1` }
     ], {
       duration: dur,
     });
-    dur += 150;
+    dur += 500;
   })
 }
 
@@ -168,11 +173,16 @@ const treeMaker = () => {
       { opacity: `1` },
       { opacity: `1` },
       { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
+      { opacity: `1` },
       { opacity: `1` }
     ], {
       duration: durk,
     });
-    durk += 150;
+    durk += 300;
   });
 
 
@@ -194,6 +204,10 @@ const treeMaker = () => {
       leave.classList.add(`treeL`);
       leave.animate([
         { opacity: `0` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
         { opacity: `1` },
         { opacity: `1` },
         { opacity: `1` },
