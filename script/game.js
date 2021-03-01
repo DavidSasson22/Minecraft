@@ -108,7 +108,7 @@ const sunMaker = () => {
 
 const blockMaker = () => {
   let blocks = [];
-  let dur = 50;
+  let dur = 40;
 
 
   //first chunk
@@ -132,9 +132,6 @@ const blockMaker = () => {
     setTimeout(function () {
       block.classList.remove(`sky`);
       block.classList.add(`block`);
-      block.animate([
-        { opacity: `0` },
-        { opacity: `1` }])
     }, dur * index);
   })
 }
@@ -156,9 +153,6 @@ const treeMaker = () => {
     setTimeout(function () {
       truck.classList.remove(`sky`);
       truck.classList.add(`treeT`);
-      truck.animate([
-        { opacity: `0` },
-        { opacity: `1` }])
     }, durk * index);
   })
 
