@@ -108,7 +108,7 @@ const sunMaker = () => {
 
 const blockMaker = () => {
   let blocks = [];
-  let dur = 2000;
+  let dur = 50;
 
 
   //first chunk
@@ -128,26 +128,14 @@ const blockMaker = () => {
     }
     l += 1;
   }
-  blocks.forEach(block => {
-    block.classList.remove(`sky`);
-    block.classList.add(`block`);
-    block.animate([
-      { opacity: `0` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` }
-    ], {
-      duration: dur,
-    });
-    dur += 500;
+  blocks.forEach(function (block, index) {
+    setTimeout(function () {
+      block.classList.remove(`sky`);
+      block.classList.add(`block`);
+      block.animate([
+        { opacity: `0` },
+        { opacity: `1` }])
+    }, dur * index);
   })
 }
 
@@ -156,35 +144,23 @@ const blockMaker = () => {
 
 //for the trees-truck
 const treeMaker = () => {
-  let durk = 1000;
+  let durk = 100;
   let trucks = [];
   for (let i = groundSt - 4; i < groundSt; i++) {
     let temp = document.querySelector(`[row = "${i}"][column = "${14}"]`);
     let temp2 = document.querySelector(`[row = "${i}"][column = "${44}"]`);
     trucks.push(temp, temp2);
   }
-  trucks.forEach(truck => {
-    truck.classList.remove(`sky`);
-    truck.classList.add(`treeT`);
-    truck.animate([
-      { opacity: `0` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` },
-      { opacity: `1` }
-    ], {
-      duration: durk,
-    });
-    durk += 300;
-  });
 
+  trucks.forEach(function (truck, index) {
+    setTimeout(function () {
+      truck.classList.remove(`sky`);
+      truck.classList.add(`treeT`);
+      truck.animate([
+        { opacity: `0` },
+        { opacity: `1` }])
+    }, durk * index);
+  })
 
 
   //For the leaves
