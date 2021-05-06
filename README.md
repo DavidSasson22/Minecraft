@@ -12,6 +12,11 @@
  ![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/game.JPG?raw=true)
  ![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/Play.JPG?raw=true)
 
+>Computer Site:
+![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/computer.JPG?raw=true)
+
+>Phone Site (landscape):
+![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/Phone.JPG?raw=true)
 
 
 
