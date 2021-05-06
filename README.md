@@ -9,7 +9,8 @@
 3. Single page.
 
 >Main functions:
-![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/game.JPG?raw=true)
+1. ![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/game.JPG?raw=true)
+2. ![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/Play.JPG?raw=true)
 
 
 
