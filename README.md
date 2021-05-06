@@ -1,22 +1,17 @@
-# To Pee Or Not To Pee
+# Mine craft game!
 
 > Product Perpuses:
-1. Need to pee? 'To Pee Or Not To Pee' will find the nearest restroom for you.
-2. Buisness owner? Now you can offer your buisness' restrooms for others, for free, for money or for any other condition, and increase your business' exposure.
+1. Having fun!
 
 >Product features:
-1. As an unsign client you could find the nearest restroom.
-2. As a sign client you could also rank the buisness and the restroom's condition.
-3. As a sign provided you could publish your buisness and offer it's restrooms.
+1. Built with vanila Java Script.
+2. Fully responsive site.
+3. Single page.
 
->MERN architecture:
-![Diagram](https://github.com/DavidSasson22/Final-Project/blob/main/mern.JPG?raw=true)
+>Main functions:
+![Diagram](https://github.com/DavidSasson22/Minecraft/blob/main/MD%20img/game.JPG?raw=true)
 
->Data Base Collections:
-![Diagram](https://github.com/DavidSasson22/To-Pee-or-Not-to-Pee/blob/main/DB.JPG?raw=true)
 
->Back-End Functions:
-![Diagram](https://github.com/DavidSasson22/To-Pee-or-Not-to-Pee/blob/main/Back-End.JPG?raw=true)
 
 
 > 
