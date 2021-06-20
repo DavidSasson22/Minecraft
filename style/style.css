@@ -15,8 +15,6 @@
   src: url("./minecraft_font/MinecraftEvenings-RBao.ttf");
 }
 
-
-
 * {
   padding: 0;
   margin: 0;
@@ -39,7 +37,7 @@ body {
 /* Play area content from here */
 
 .playArea {
-  width: 98%;
+  width: 99%;
   height: calc(100vw * 0.32);
   display: none;
   flex-wrap: wrap;
@@ -56,7 +54,7 @@ body {
 }
 
 .sky {
-  background-color: #3FBFFF;
+  background-color: #3fbfff;
 }
 
 .upperLand {
@@ -70,12 +68,11 @@ body {
 
 .cloud {
   background-color: lemonchiffon;
-  border-radius:35% 25% 25% 5%;
+  border-radius: 35% 25% 25% 5%;
   box-shadow: 0px 0px 4px 2px rgb(0, 238, 255);
   transition: ease-in-out;
   transition-duration: 0.5s;
 }
-
 
 .sunTL {
   background-color: #f90;
@@ -97,7 +94,6 @@ body {
   border-radius: 0 0 0 100%;
   transition: ease-in-out;
   transition-duration: 0.5s;
-
 }
 .sunBR {
   background-color: #f90;
@@ -123,12 +119,12 @@ body {
   box-shadow: 0px 0px 4px 2px #77d62a;
 }
 
-
 /* Toll box content from here */
 
 .toolBox {
   padding: 16px;
-  width: 98%;
+  width: 99%;
+  height: calc(100vh - (102vw * 0.32));
   background-color: #ddb174;
   display: none;
   justify-content: space-around;
@@ -139,18 +135,17 @@ body {
   border-right: 4px rgb(114, 47, 8) solid;
 }
 
-
 .headline {
   padding: 0 24px 0 0;
 }
 
 .toolBox h1 {
-  writing-mode:vertical-lr;
+  writing-mode: vertical-lr;
   font-family: minecraftFontBold;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;  
-  color: #3D4491;
+  line-height: 23px;
+  color: #3d4491;
 }
 
 .toolBox h2 {
@@ -160,7 +155,7 @@ body {
   line-height: 17px;
   text-align: center;
   margin-bottom: 4px;
-  color: #3D4491;
+  color: #3d4491;
 }
 
 ul {
@@ -174,7 +169,7 @@ li {
   margin: 0 1px 0 1px;
   width: 60px;
   height: 60px;
-  border: 1px #2F6B91 solid;
+  border: 1px #2f6b91 solid;
   background-size: cover;
   transition: all 0.1s ease-in;
   color: white;
@@ -187,7 +182,7 @@ li {
 
 li:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 5px #8A7D6B;
+  box-shadow: 5px 5px 5px #8a7d6b;
 }
 
 .axe {
@@ -229,22 +224,21 @@ li:hover {
   height: 40px;
   margin-top: 12px;
   font-family: minecraftFontBold;
-  border: 4px solid #BDD6D2;
-  background-color: #5A9189;
+  border: 4px solid #bdd6d2;
+  background-color: #5a9189;
   color: aliceblue;
   transition: all 0.1s ease-in;
 }
 
 .toolBox button:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 5px #8A7D6B;
+  box-shadow: 5px 5px 5px #8a7d6b;
 }
 
 .chosen {
-  border: 3px solid #5A9189;
+  border: 3px solid #5a9189;
   opacity: 1;
 }
-
 
 /* -------------------Landing Page----------------------------- */
 
@@ -276,13 +270,11 @@ li:hover {
   background-repeat: no-repeat;
 }
 
-
 .rules h6 {
   font-family: minecraftFontRegular;
   font-size: 32px;
   color: white;
 }
-
 
 .startGame {
   color: black;
@@ -293,12 +285,10 @@ li:hover {
   transition: all 0.2s ease-in;
 }
 
-
 .startGame:hover {
   cursor: pointer;
   box-shadow: 5px 5px 5px white;
 }
-
 
 @media (max-width: 700px) {
   .rules h6 {
@@ -306,7 +296,7 @@ li:hover {
   }
   li {
     height: 40px;
-    width: 40px;    
+    width: 40px;
   }
   .toolBox h1 {
     font-size: 16px;
@@ -315,6 +305,6 @@ li:hover {
     font-size: 14px;
   }
   body {
-  background-color: #ddb174;
+    background-color: #ddb174;
   }
-} 
+}
